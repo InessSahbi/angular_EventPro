@@ -1,0 +1,68 @@
+<div style="background-color: #ffffff;"></div>
+<div class="container-fluid">
+  <app-sidebar></app-sidebar>
+    <h3 class="description-text text-start">Conférences </h3>
+    <div class="row row-cols-1 row-cols-md-4 g-4">
+      <div class="col" *ngFor="let item of events_externes_conf">
+        <div class="card h-100 p-2">
+          <img src="{{item.picture_url}}" class="card-img-top" alt="assets/imagesSlider/events.webp">
+                <div class="card-body">
+                <h5 class="card-title">{{item.name}}</h5>
+                <p class="card-text">{{item.description}}</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                <li class="list-group-item">{{item.date}} jusqu'à {{item.end_date}}</li>
+                <li class="list-group-item">{{item.location}}</li>
+                <li class="list-group-item">{{item.price}}</li>
+                </ul>
+                <div class="card-body">
+                    <a  class="card-link">Plus details</a>
+                    <a href="#" class="card-link">Participer </a>
+                </div>
+            </div>
+        </div>
+    </div>
+        <h3 class="description-text text-start">Salons</h3>
+        <div class="row row-cols-1 row-cols-md-4 g-4">
+          <div class="col" *ngFor="let item of events_externes_salon">
+            <div class="card h-100 p-2">
+              <img src="{{item.picture_url}}" class="card-img-top" alt="assets/imagesSlider/events.webp">
+              <div class="card-body">
+                <h5 class="card-title">{{item.name}}</h5>
+                <p class="card-text">{{item.description}}</p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">{{item.date}} jusqu'à {{item.end_date}}</li>
+                <li class="list-group-item">{{item.location}}</li>
+                <li class="list-group-item">{{item.price}}</li>
+              </ul>
+              <div class="card-body">
+                <a  class="card-link">Plus details</a>
+                <a href="#" class="card-link">Participer </a>
+            </div>
+            </div>
+    </div>
+</div>
+    <h3 class="description-text text-start">journées portes ouvertes </h3>
+    <div class="row row-cols-1 row-cols-md-4 g-4">
+      <div class="col" *ngFor="let item of events_externes_jpo">
+        <div class="card h-100 p-2">
+          <img src="{{item.picture_url}}" class="card-img-top" alt="">
+          <div class="card-body">
+            <h5 class="card-title">{{item.name}}</h5>
+            <p class="card-text">{{item.description}}</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">{{item.date}} jusqu'à {{item.end_date}}</li>
+            <li class="list-group-item">{{item.location}}</li>
+            <li class="list-group-item">{{item.price}}</li>
+          </ul>
+          <div class="card-body">
+            <a  class="card-link">Plus details</a>
+            <a href="#" class="card-link">Participer </a>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+

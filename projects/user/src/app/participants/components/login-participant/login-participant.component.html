@@ -1,0 +1,56 @@
+<div class="container text-center ">
+    <div class="row">
+      <div class="col">
+        <nav class="navbar" style="padding: 8px;">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+              <img src="assets/imagesSlider/R.png" alt="Logo" width="145" height="43" class="">
+            </a>
+          </div>
+        </nav>
+      </div>
+      <div class="col col-md-auto">
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarScroll">
+              <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                <li class="nav-item dropdown" style="padding: 10px;">
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container container-fluid">
+    
+  <div class="card-box">
+    <h3 class="card-title">Connectez-vous en tant que membre de l'organisation pour profiter des avantages exclusifs de notre site:</h3>
+      <div class="row justify-content-center mt-5">
+        <div class="col-md-6">
+          <form [formGroup]="userForm2" (ngSubmit)="onlogin()">
+            <div >
+              <input type="text" class="form-control" formControlName="email"  placeholder="email">
+              <div *ngIf="userForm2.get('email')?.invalid && userForm2.get('email')?.touched">
+                <small *ngIf="userForm2.get('email')?.errors?.['required']">Email is required.</small>
+                <small *ngIf="userForm2.get('email')?.errors?.['email']">Enter a valid email address.</small>
+              </div>
+            </div>
+  
+            <div>
+              <input type="password" class="form-control" formControlName="password"  placeholder="Password">
+              <div *ngIf="userForm2.get('password')?.invalid && userForm2.get('password')?.touched">
+                <small *ngIf="userForm2.get('password')?.errors?.['required']">Password is required.</small>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-lg" style="color: aliceblue; background-color: #4a76a8; position: relative;left: 18px; margin-top: 0px;margin-right: 10px;">Registre</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    </div>

@@ -1,0 +1,27 @@
+.container-fluid {
+    width: 90%;
+    margin: auto;
+    max-width: 1200px;
+}
+
+.card-box {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    margin: 80px 40px;
+}
+.card-title {
+    font-size: 45px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #4a76a8;
+}
+
+
+.form-control{
+    padding: 20px;
+    margin: 20px;
+}

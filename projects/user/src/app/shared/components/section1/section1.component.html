@@ -1,0 +1,64 @@
+<div class="container-fluid">
+    <div class="image-slider " >
+        <img [src]="currentImage" alt="Slider Image" class="slider-image" />
+        <div class="overlay d-flex flex-column justify-content-center align-items-center" >
+        <div class="search-container">
+            <p class="description-text text-center">Chercher de evennements</p>
+            <div class="row" >
+            <div class="col" >
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid" style="padding: 1px;">
+                    <form class="d-flex justify-content-center" style="width:60rem;" role="search">
+                    <input class="form-control " (change)="search($event)" type="text" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="getEventSearch()" style="--bs-btn-padding-y: .30rem; --bs-btn-padding-x: .8rem; --bs-btn-font-size: .rem;" type="submit">Search</button>
+                    </form>
+                </div>
+                </nav>
+            </div>
+            </div>
+        </div>
+        </div>
+      </div>
+      
+    </div>
+
+    <div class="modal-dialog modal-dialog-scrollable">
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="col" *ngFor="let item of events_externes_search">
+                    <div class="card h-100 p-2">
+                    <img src="{{item.picture_url}}" class="card-img-top" alt="assets/imagesSlider/events.webp">
+                    <div class="card-body">
+                        <h5 class="card-title">{{item.name}}</h5>
+                        <p class="card-text">{{item.description}}</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">{{item.date}} jusqu'à {{item.end_date}}</li>
+                        <li class="list-group-item">{{item.location}}</li>
+                        <li class="list-group-item">{{item.price}}</li>
+                    </ul>
+                    <div class="card-body">
+                        <a  class="card-link">plus details</a>
+                        <a href="#" class="card-link">Participer </a>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div></div>
+    <div class="container-fluid" >
+        <div class="row row-cols-1 row-cols-md-4 g-4">
+          <!-- -->
+        </div>
+        </div>
